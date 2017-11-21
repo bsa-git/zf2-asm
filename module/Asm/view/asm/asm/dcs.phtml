@@ -1,0 +1,69 @@
+<!--Set a layout variable   -->
+<?php 
+$this->layout()->section = "dcs";
+?>
+
+<!-- breadcrumbs  -->
+<?php echo $this->partial('/asm/asm/lib/dcs/breadcrumbs.phtml'); ?>
+<!-- content -->
+<section id="content">
+    <div class="wrapper">
+        <div class="box_shadow">
+            <div class="box">
+                <div class="wrapper">
+                    <header class="title">
+                        <h2>Станции сбора данных</h2>
+                    </header>
+
+                    <div class="accordion" id="accordion1">
+                        <div class="accordion-group">
+                            <div class="accordion-heading "  >
+                                <center><span class="tag-value text-success" ></span></center>
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content1">
+                                    Цех М5-1(отделение)
+                                </a>
+                            </div>
+                            <div id="accordion1-content1" class="accordion-body collapse in" >
+                                <div class="accordion-inner">
+                                    <iframe frameborder="" height="600" scrolling="yes" src="http://10.60.0.201/operator.htm" width="100%"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <center><span class="tag-value text-success" ></span></center>
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content2">
+                                    Цех М7-1(отделение)
+                                </a>
+                            </div>
+                            <!-- stock-container    -->
+                            <div id="accordion1-content2" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    <iframe frameborder="" height="600" scrolling="yes" src="http://10.60.0.216" width="100%"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <center><span class="tag-value text-success" ></span></center>
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content3">
+                                    Цех М7-2(отделение)
+                                </a>
+                            </div>
+                            <div id="accordion1-content3" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    <iframe frameborder="" height="600" scrolling="yes" src="http://10.60.0.217" width="100%"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <?php echo $this->partial('/application/index/lib/home/articles-post.phtml'); ?>
+    </div>    
+</section>
+<!-- content -->
+

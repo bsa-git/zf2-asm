@@ -1,0 +1,246 @@
+/*body {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}*/
+
+a:hover { /* Цвет наведенных ссылок */
+    text-decoration: none;
+    color: black;
+    /*color: white;*/
+}
+
+a:link { /* Цвет ссылок */
+    color: black; 
+    /*color: white;*/
+}
+
+a:visited { /* Цвет посещенных ссылок */
+    color: black; 
+    /*color: white;*/
+}
+
+.box ul.nav li.active a {
+    background:#f5f6fc;
+    font-weight: bold;
+}
+
+box ul.nav li.active a:hover {
+    background:#f5f6fc;
+    font-weight: bold;
+}
+
+
+header.title {
+    text-align: center;
+}
+
+.box .hero-unit{
+    margin-bottom: 0px;
+}
+
+
+.zf-green {
+    color: #68b604;
+}
+
+.zf-red {
+    color: #ff3366;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #57a900;
+    background-image: -moz-linear-gradient(top, #70d900, #57a900);
+    background-image: -ms-linear-gradient(top, #70d900, #57a900);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+    background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+    background-image: -o-linear-gradient(top, #70d900, #57a900);
+    background-image: linear-gradient(top, #70d900, #57a900);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+    background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+    background-color: #57a900;
+}
+
+div.container a.brand {
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+    height: 10px;
+}
+
+.accordion-heading {
+    position: relative;
+    background-color: #fafafa;
+    background-image: -moz-linear-gradient(top, #ffffff, #DAD5D5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#DAD5D5));
+    background-image: -webkit-linear-gradient(top, #ffffff, #DAD5D5);
+    background-image: -o-linear-gradient(top, #ffffff, #DAD5D5);
+    background-image: linear-gradient(to bottom, #ffffff, #DAD5D5);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
+    *zoom: 1;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+span.tag-value{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    font-size: medium;
+    font-weight: bold;
+}
+
+img.wait-loading-data {
+    margin-left: 5px;
+    display: none;
+}
+
+input.report-check{
+    margin-right: 5px;
+}
+
+th {
+    background-color: #656565;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 0 10px;
+    color: #fff;
+    text-shadow:#414141 0 1px 0px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+/* custom player skin */
+.flowplayer { width: 30%; background-color: #222; background-size: cover; max-width: 800px; }
+.flowplayer .fp-controls { background-color: rgba(0, 0, 0, 0.4)}
+.flowplayer .fp-timeline { background-color: rgba(0, 0, 0, 0.5)}
+.flowplayer .fp-progress { background-color: rgba(219, 0, 0, 1)}
+.flowplayer .fp-buffer { background-color: rgba(249, 249, 249, 1)}
+.flowplayer { background-image: url(../img/media/player/rock-music.jpg)}
+
+/* container has a background image  lightbox-media */
+div.media a.divbox-media {
+    display:block;
+    width:128px;
+    height:128px;
+    padding:0;
+    margin:0 20px 0 0;
+}
+
+/* splash image */
+div.media a.divbox-media img {
+    margin-top:45px;
+    margin-left: 70px;
+    border:0;
+}
+
+/****** Breadcrumbs *******/
+#breadcrumbs {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 10px;
+}
+
+#breadcrumbs a {
+    color: #fff;
+}
+
+/****** Flex Slider  *******/
+.flex-direction-nav a:before {
+    font-size: 20px;
+}
+
+
+
+/****** Logo  *******/
+#logo2 {
+    position: absolute;
+    right: 3%;
+    top: 0px;
+    /*top: 90px;*/
+    font:20px "Times New Roman", Times, serif;line-height:78px;
+    font-style: italic;
+    font-weight: bold;
+    z-index: 4;
+}
+
+#logo2.view-panel {
+    top: 40px;
+}
+
+#logo2 a{
+    text-decoration: none;
+}
+
+#logo2 a:hover {
+    text-decoration: none;
+}
+
+
+/****** Menu *******/
+header nav {
+    top: 0px;
+}
+
+/*footer {
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    z-index:3;
+    bottom: 0px;
+    
+}*/
+
+/****** Flex Slider *******/
+.flexslider {
+    border: 4px solid #790F1B;
+}
+
+/****** Links *******/
+a.accordion-toggle{
+    text-decoration: none;
+    color: #9a0822;
+}
+
+a.accordion-toggle:hover {
+    text-decoration: none;
+    color: #9a0822;
+}
+
+a.carousel-control {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.btn {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.nav-tabs a {
+    text-decoration: none;
+    color: #9a0822;
+}
+
+ul.nav-tabs a:hover {
+    text-decoration: none;
+    color: #9a0822;
+}
+
+/****** messages *******/
+#container-message {
+    /*    margin-top: 100px;*/
+}

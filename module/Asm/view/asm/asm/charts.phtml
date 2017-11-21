@@ -1,0 +1,316 @@
+<!--Set a layout variable-->
+<?php
+$this->layout()->section = "trends";
+$this->layout()->is_highcharts = false;
+$this->layout()->is_highstock = true;
+$this->layout()->is_asmtrends = true;
+$this->layout()->is_utility = true;
+
+//$tags = $this->tags;
+?>
+
+<!--Добавим параметры для обьекта класса - AsmTrends-->
+<script type="text/javascript">
+    addScriptParams('AsmTrends', 
+    {
+        container: 'asm-trends',
+        update_period: 10000, //10 sec
+        allowed_number_errors: 3, // допустимое кол. ошибок
+        allowable_percentage_out_of_range: 2 // допустимый процент выхода за диапазон от шкалы измерения
+    }); 
+</script>
+
+<!--Добавим параметры для обьекта класса - ChartBox-->
+<script type="text/javascript">
+    addScriptParams('ChartBox', 
+    {
+        StockChart: [
+            //======== OC ========//
+            // NH3
+            {chart : {renderTo: '02NH3_P4',type: 'spline'}},
+            {chart : {renderTo: '02NH3_T4',type: 'spline'}},
+            {chart : {renderTo: '02NH3_F4',type: 'spline'}},
+            // PGAZ
+            {chart : {renderTo: '02PGAZ_P5',type: 'spline'}},
+            {chart : {renderTo: '02PGAZ_T16',type: 'spline'}},
+            {chart : {renderTo: '02PGAZ_F5',type: 'spline'}},
+            // JAM-1
+            {chart : {renderTo: '02JAM_P21_1',type: 'spline'}},
+            {chart : {renderTo: '02JAM_T21_1',type: 'spline'}},
+            {chart : {renderTo: '02JAM_F21_1',type: 'spline'}},
+            // JAM-2
+            {chart : {renderTo: '02JAM_P21_2',type: 'spline'}},
+            {chart : {renderTo: '02JAM_T21_2',type: 'spline'}},
+            {chart : {renderTo: '02JAM_F21_2',type: 'spline'}},
+            // PAR16-1
+            {chart : {renderTo: '02PAR_P2_1',type: 'spline'}},
+            {chart : {renderTo: '02PAR_T2_1',type: 'spline'}},
+            {chart : {renderTo: '02PAR_F2_1',type: 'spline'}},
+            // PAR16-2
+            {chart : {renderTo: '02PAR_P2_2',type: 'spline'}},
+            {chart : {renderTo: '02PAR_T2_2',type: 'spline'}},
+            {chart : {renderTo: '02PAR_F2_2',type: 'spline'}},
+            // SKLAD
+            {chart : {renderTo: '01SKLAD_L26',type: 'spline'}},
+            {chart : {renderTo: '02SKLAD_L26',type: 'spline'}},
+            {chart : {renderTo: '02SKLAD_SUM',type: 'spline'}},
+            // HNO3 M9
+            {chart : {renderTo: '02HNO3_F20_1',type: 'spline'}},
+            {chart : {renderTo: '02HNO3_F20_2',type: 'spline'}},
+            {chart : {renderTo: '02HNO3_P20_1',type: 'spline'}},
+            {chart : {renderTo: '02HNO3_P20_2',type: 'spline'}},
+            {chart : {renderTo: '02HNO3_P22_1',type: 'spline'}},
+            {chart : {renderTo: '02HNO3_P22_2',type: 'spline'}},
+            {chart : {renderTo: '02HNO3_Q20',type: 'spline'}},
+            {chart : {renderTo: '02HNO3_T20',type: 'spline'}},
+            // VODA XOB
+            {chart : {renderTo: '02XOB_P4',type: 'spline'}},
+            {chart : {renderTo: '02XOB_T1',type: 'spline'}},
+            {chart : {renderTo: '02XOB_F1',type: 'spline'}},
+            // VODA OB
+            {chart : {renderTo: '02OB_T1_1',type: 'spline'}},
+            {chart : {renderTo: '02OB_T1_2',type: 'spline'}},
+            //============ AGR 1/2 =========//
+            //PS-180
+            {chart : {renderTo: '12VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '12VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '12VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '12VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '12TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '12VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '12VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '12NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '12NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '12HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '12NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '12EA_RD',type: 'spline'}},
+            //============ AGR 2/2 =========//
+            //PS-180
+            {chart : {renderTo: '22VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '22VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '22VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '22VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '22TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '22VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '22VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '22NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '22NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '22HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '22NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '22EA_RD',type: 'spline'}},
+            //============ AGR 3/2 =========//
+            //PS-180
+            {chart : {renderTo: '32VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '32VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '32VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '32VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '32TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '32VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '32VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '32NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '32NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '32HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '32NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '32EA_RD',type: 'spline'}},
+            //============ AGR 4/2 =========//
+            //PS-180
+            {chart : {renderTo: '42VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '42VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '42VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '42VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '42TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '42VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '42VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '42NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '42NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '42HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '42NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '42EA_RD',type: 'spline'}},
+            //============ AGR 5/2 =========//
+            //PS-180
+            {chart : {renderTo: '52VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '52VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '52VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '52VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '52TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '52VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '52VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '52NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '52NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '52HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '52NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '52EA_RD',type: 'spline'}},
+            //============ AGR 6/2 =========//
+            //PS-180
+            {chart : {renderTo: '62VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '62VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '62VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '62VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '62TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '62VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '62VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '62NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '62NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '62HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '62NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '62EA_RD',type: 'spline'}},
+            //============ AGR 7/2 =========//
+            //PS-180
+            {chart : {renderTo: '72VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '72VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '72VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '72VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '72TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '72VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '72VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '72NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '72NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '72HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '72NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '72EA_RD',type: 'spline'}},
+        ]
+
+    });
+</script>
+
+
+<!-- breadcrumbs  -->
+<?php echo $this->partial('/asm/asm/lib/charts/breadcrumbs.phtml'); ?>
+<!-- content -->
+<section id="content">
+    <div class="wrapper">
+        <div class="box_shadow">
+            <div class="box">
+                <div class="wrapper">
+                    <header class="title">
+                        <h2>Данные в реальном времени Цех М-5</h2>
+                    </header>
+
+                    <div id="asm-trends" class="tabbable" style="margin-bottom: 18px;">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#oc-02" data-toggle="tab">ОЦ</a></li>
+                            <li class=""><a href="#agregat-12" data-toggle="tab">Агрегат-1/2</a></li>
+                            <li class=""><a href="#agregat-22" data-toggle="tab">Агрегат-2/2</a></li>
+                            <li class=""><a href="#agregat-32" data-toggle="tab">Агрегат-3/2</a></li>
+                            <li class=""><a href="#agregat-42" data-toggle="tab">Агрегат-4/2</a></li>
+                            <li class=""><a href="#agregat-52" data-toggle="tab">Агрегат-5/2</a></li>
+                            <li class=""><a href="#agregat-62" data-toggle="tab">Агрегат-6/2</a></li>
+                            <li class=""><a href="#agregat-72" data-toggle="tab">Агрегат-7/2</a></li>
+                        </ul>
+                        <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+                            <!--  OC -->
+                            <div class="tab-pane active" id="oc-02">
+                                <?php echo $this->partial('/asm/asm/lib/charts/oc-02.phtml'); ?>
+                            </div>    
+                            <div class="tab-pane" id="agregat-12">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-12.phtml'); ?>
+                            </div>
+                            <div class="tab-pane" id="agregat-22">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-22.phtml'); ?>
+                            </div>
+                            <div class="tab-pane" id="agregat-32">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-32.phtml'); ?>
+                            </div>
+                            <div class="tab-pane" id="agregat-42">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-42.phtml'); ?>
+                            </div>
+                            <div class="tab-pane" id="agregat-52">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-52.phtml'); ?>
+                            </div>
+                            <div class="tab-pane" id="agregat-62">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-62.phtml'); ?>
+                            </div>
+                            <div class="tab-pane" id="agregat-72">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-72.phtml'); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+<?php echo $this->partial('/application/index/lib/home/articles-post.phtml'); ?>
+    </div>    
+</section>
+<!-- content -->
+
+
+

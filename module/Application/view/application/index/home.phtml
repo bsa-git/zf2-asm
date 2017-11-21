@@ -1,0 +1,53 @@
+<!--Set a layout variable-->
+<?php
+$this->layout()->section = "home";
+$this->layout()->is_banners_carousel = false;
+$this->layout()->is_slider_flex = true;
+
+?>
+<!-- Добавим параметры для обьектов -->
+<script type="text/javascript">
+    // SLIDER FLEX
+    addScriptParams('SliderFlex', 
+    {
+        container: 'flexslider',
+        options: {animation: "slide", prevText: "", nextText: ""}
+    });
+</script>
+
+<!-- breadcrumbs  -->
+<?php echo $this->partial('/application/index/lib/home/breadcrumbs.phtml'); ?>
+<!-- content -->
+<section id="content">
+    <div class="wrapper">
+        <div class="box_shadow">
+            <div class="box">
+                <header class="title">
+                    <h2>Автоматизированная система мониторинга (АСМ) Цех М-5</h2>
+                </header>
+                <center>
+                    <?php if ($this->is_new_year): ?> 
+                        <?php echo $this->partial('/application/index/lib/home/congratulation-christmas.phtml'); ?>
+                        <?php echo $this->partial('/application/index/lib/home/slider-christmas.phtml'); ?>
+                    <?php elseif ($this->is_8_march): ?> 
+                        <?php echo $this->partial('/application/index/lib/home/congratulation-8-march.phtml');?>
+                        <?php echo $this->partial('/application/index/lib/home/slider-8-march.phtml'); ?>
+                    <?php else: ?>
+                        <?php echo $this->partial('/application/index/lib/home/slider-main.phtml'); ?>
+                    <?php endif; ?>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <?php echo $this->partial('/application/index/lib/home/articles-post.phtml'); ?>
+    </div>    
+</section>
+<!-- content -->
+
+
+
+
+
+
+

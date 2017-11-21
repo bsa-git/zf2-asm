@@ -1,0 +1,60 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+
+#panel .navbar {
+    font-size: 13px;
+}
+
+/* Change the docs' brand */
+#panel .navbar .brand {
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 20px;
+/*    float: right;*/
+    font-weight: bold;
+    color: #cccccc;
+    text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+}
+#panel .navbar .brand:hover {
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+    color: #fff;
+}
+
+#advanced span.trigger{display:block;position:absolute; background:url(../img/tm/pro_button.png) 0 0 no-repeat; width:42px; height:42px; right:0; top:0px; cursor:pointer;}
+/*#advanced span.trigger{display:block;position:absolute; background:url(../img/tm/pro_button.png) 0 0 no-repeat; width:42px; height:42px; right:0; cursor:pointer;}*/
+#advanced span.trigger strong{display:block; background: url(../img/tm/plus-minus.png) 0 0 no-repeat; width:11px; height:11px; position:absolute; right:7px; bottom:24px; opacity:0;}
+#advanced.closed span.trigger strong{opacity:1; }
+#advanced span.trigger em{display:block; background: url(../img/tm/plus-minus.png) -11px 0 no-repeat; width:11px; height:11px; position:absolute; right:7px; bottom:24px;}
+#advanced.closed div.navbar-inner {display: none}
+
+
+#panel li {
+    line-height: 20px;
+}
+
+#panel .dropdown {
+    position: relative; 
+}
+#panel #advanced {
+    position: relative;
+}
+
+#panel .dropdown-toggle {
+    *margin-bottom: -3px;
+}
+
+#panel .dropdown-toggle:active,
+#panel .open .dropdown-toggle {
+    outline: 0;
+}

@@ -1,0 +1,30 @@
+<!-- alert  Выведем сообщение (class_message: alert-block, alert-error, alert-success, alert-info) -->
+
+<div class="system-message" id="container-message" >
+    <?php
+    if ($this->class_message) {
+        $html .= "<div class='alert {$this->class_message} fade in' >";
+
+        $title = "";
+        $message = "";
+
+        // Получим заголовок сообщения
+        $title = '<center><h4 class="alert-heading">' . $this->translate($this->class_message) . "!</h4></center>";
+
+        // Получим само сообщение
+        if (is_array($this->message)) {
+            foreach ($this->message as $msg) {
+                $message .= "$msg<br />";
+            }
+        } else {
+            $message = $this->message;
+        }
+        
+        $html .= $title . ' ' . $message;
+        
+        $html .= '</div>';
+        
+        echo $html;
+    }
+    ?> 
+</div> <!-- /alert -->

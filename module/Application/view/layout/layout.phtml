@@ -1,0 +1,162 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <meta name="description" content="Your description">
+        <meta name="keywords" content="Your keywords">
+        <meta name="author" content="Your name">
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
+        
+        <!-- Styles  -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'));
+        echo $this->headLink()->setStylesheet($this->basePath() . '/css/bootstrap.css');
+        echo $this->headLink()->setStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css');
+        echo $this->headLink()->setStylesheet($this->basePath() . '/css/font-awesome.min.css');
+        echo $this->headLink()->setStylesheet($this->basePath() . '/css/reset.css');
+        echo $this->headLink()->setStylesheet($this->basePath() . '/css/layout.css');
+        if($this->scheme == "red-dark-blue"){
+            echo $this->headLink()->setStylesheet($this->basePath() . '/schemes/red-dark-blue/css/style.css');
+        }else if($this->scheme == "yellow-dark-blue"){
+            echo $this->headLink()->setStylesheet($this->basePath() . '/schemes/yellow-dark-blue/css/style.css');
+        }
+        
+        ?>
+
+        <!-- Scripts  -->
+        <?php
+        echo $this->headScript()->setFile($this->basePath() . '/js/jquery/jquery.min.js');
+        echo $this->headScript()->setFile($this->basePath() . '/js/bootstrap/bootstrap.min.js');
+        echo $this->headScript()->setFile($this->basePath() . '/js/html5/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',));
+        echo $this->headScript()->setFile($this->basePath() . '/js/BSA.Bootstrap.js');
+        echo $this->headScript()->setFile($this->basePath() . '/js/LangBox.class.js');
+        echo $this->headScript()->setFile($this->basePath() . '/js/BSA.System.js');
+        ?>
+
+        <!--  inline Scripts  -->
+        <?php
+        
+        // Загрузить панель с меню
+        if ($this->is_panel) { 
+            echo $this->headLink()->setStylesheet($this->basePath() . '/css/docs.css');
+        }
+        
+        // Загрузить скрипт видео проигрывателя
+        if ($this->is_flowplayer) {// playful minimalist functional
+            echo $this->headLink()->setStylesheet($this->basePath() . '/js/video-players/flowplayer-html5/skin/minimalist.css');
+            echo $this->headScript()->setFile($this->basePath() . '/js/video-players/flowplayer-html5/flowplayer.min.js');
+        }
+        // Загрузить скрипт видео проигрывателя
+        if ($this->is_divbox) {// 
+            echo $this->headLink()->setStylesheet($this->basePath() . '/js/media-divbox/css/divbox.css');
+            echo $this->headScript()->setFile($this->basePath() . '/js/media-divbox/divbox.js');
+            echo $this->headScript()->setFile($this->basePath() . '/js/DivBox.class.js');
+        }
+        
+        // Загрузить скрипт видео проигрывателя
+        if ($this->is_touchtouch) {// 
+            echo $this->headLink()->setStylesheet($this->basePath() . '/js/gallery-touchtouch/css/style.css');
+        } 
+        
+        // Загрузить карусель с банерами
+        if ($this->is_banners_carousel) {// 
+            echo $this->headScript()->setFile($this->basePath() . '/js/CarouselBanners.class.js');
+        }
+        
+        // Загрузить карусель с миниатурами
+        if ($this->is_thumbnail_carousel) {// 
+            echo $this->headLink()->setStylesheet($this->basePath() . '/css/thumbnail-carousel/carousel.css');
+            echo $this->headScript()->setFile($this->basePath() . '/js/CarouselThumbs.class.js');
+        }
+        
+        
+        // Загрузить слайдер flex
+        if ($this->is_slider_flex) {// 
+            echo $this->headLink()->setStylesheet($this->basePath() . '/js/slider-flex/css/flexslider.css');
+            echo $this->headScript()->setFile($this->basePath() . '/js/slider-flex/jquery.flexslider-min.js');
+            echo $this->headScript()->setFile($this->basePath() . '/js/SliderFlex.class.js');
+        }
+        
+        // Загрузить меню superfish
+        if ($this->is_superfish) {// 
+            echo $this->headScript()->setFile($this->basePath() . '/js/menu-superfish/superfish.js');
+            echo $this->headScript()->setFile($this->basePath() . '/js/SuperFish.class.js');
+        }
+        
+        // Загрузить скрипт утилит
+        if ($this->is_utility) {
+            echo $this->headScript()->setFile($this->basePath() . '/js/BSA.Utility.js');
+        }
+
+        // Загрузить скрипт создания графиков
+        if ($this->is_highcharts) {
+            echo $this->headScript()->setFile($this->basePath() . '/js/highcharts/highcharts.js');
+            echo $this->headScript()->setFile($this->basePath() . '/js/highcharts/modules/exporting.js');
+            echo $this->headScript()->setFile($this->basePath() . '/js/ChartBox.class.js');
+        }
+        // Загрузить скрипт создания графиков (с историей)
+        if ($this->is_highstock) {
+            echo $this->headScript()->setFile($this->basePath() . '/js/highstock/highstock.js');
+            if (!$this->highcharts) {
+                echo $this->headScript()->setFile($this->basePath() . '/js/highstock/modules/exporting.js');
+                echo $this->headScript()->setFile($this->basePath() . '/js/ChartBox.class.js');
+            }
+        }
+
+        // Загрузить скрипт управления создания трендов для АСМ
+        if ($this->is_asmtrends) {
+            echo $this->headScript()->setFile($this->basePath() . '/js/AsmTrends.class.js');
+        }
+        ?>
+    </head>
+    <body>
+        <?php echo $this->partial('/layout/lib/msg-box/common.phtml');?>
+        <!--============================== HEADER PANEL ===========================-->
+        <?php if($this->is_panel){ echo $this->partial('/layout/lib/header/header-panel.phtml');}?>
+        <!--============================== LOGOTYPE ===========================-->
+        <?php echo $this->partial('/layout/lib/header/header-logotype.phtml'); ?>
+        <div class="body2">
+            <div class="body7">
+                <div class="body4">
+                    <div class="container">
+                        <!--============================== HEADER ===========================-->
+                        <?php
+                        //insert the happy-new-year.phtml
+                        if ($this->is_new_year) {
+                            echo $this->headLink()->setStylesheet($this->basePath() . '/js/new_year/stylen.css');
+                            echo $this->InlineScript()->setFile($this->basePath() . '/js/new_year/swfobject.js');
+                            echo $this->InlineScript()->setFile($this->basePath() . '/js/NewYear.class.js');
+                            echo $this->partial('/layout/lib/header/happy-new-year.phtml');
+                            echo '<br /><br /><br /><br /><br />';
+                        }
+                        // insert the header-menu-top.phtml
+                        echo $this->partial('/layout/lib/header/header-menu-top.phtml', array(
+                            'section' => $this->section,
+                            'is_icon_white' => $this->is_icon_white,
+                            'url_doc' => $this->url_doc
+                            ));
+                        
+                        // insert the message.phtml
+                        echo $this->partial('/layout/lib/message/message.phtml');
+                        ?>
+                        <!--============================== CONTENT ==========================-->
+                            <?php echo $this->content;?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============================== FOOTER ===========================-->
+        <div class="body5">
+            <div class="body6">
+                <div class="container">
+                    <footer>
+                        <?php echo $this->partial('/layout/lib/footer/footer-privacy.phtml');?>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <?php echo $this->headLink()->setStylesheet($this->basePath() . '/css/mystyle.css'); ?>
+    </body>
+</html>

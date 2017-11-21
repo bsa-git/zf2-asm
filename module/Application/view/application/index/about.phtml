@@ -1,0 +1,156 @@
+<!--Set a layout variable-->
+<?php
+$this->layout()->section = "about";
+$this->layout()->is_flowplayer = false;
+$this->layout()->is_divbox = true;
+$this->layout()->is_touchtouch = true;
+$this->layout()->is_thumbnail_carousel = false;
+$this->layout()->is_banners_carousel = false;
+$this->layout()->is_slider_flex = true;
+?>
+<!-- Добавим параметры для обьектов -->
+<script type="text/javascript">
+    addScriptParams('DivBox', 
+    {
+        container: 'divbox-media',
+        caption: false
+    }); 
+    addScriptParams('DivBox', 
+    {
+        container: 'divbox-image1',
+        caption: true
+    });
+    addScriptParams('DivBox', 
+    {
+        container: 'divbox-image2',
+        caption: true
+    });
+    addScriptParams('DivBox', 
+    {
+        container: 'divbox-image3',
+        caption: true
+    });
+    addScriptParams('SliderFlex', 
+    {
+        container: 'flexslider',
+        options: {animation: "slide", prevText: "", nextText: ""}
+    });
+</script>
+
+
+<!-- breadcrumbs -->
+<?php echo $this->partial('/application/index/lib/about/breadcrumbs.phtml'); ?>
+<!-- content -->
+<section id="content">
+    <div class="wrapper">
+        <div class="box_shadow">
+            <div class="box">
+                <header class="title">
+                    <h2>Информация о цехе М-5</h2>
+                </header>
+                <div class="hero-unit">
+                    <?php
+                    echo $this->partial('/application/index/lib/about/information-about-production.phtml');
+                    ?>
+                </div>
+                <br />
+                <div class="accordion" id="accordion1">
+                    <div class="accordion-group">
+                        <div class="accordion-heading "  >
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-content1">
+                                Наша история
+                            </a>
+                        </div>
+                        <div id="accordion1-content1" class="accordion-body collapse" >
+                            <div class="accordion-inner">
+                                <center>
+                                    <?php
+                                    echo $this->partial('/application/index/lib/about/carousel-history.phtml');
+                                    ?>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+<!--                        <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-content2">
+                                Наши достижения
+                            </a>
+                        </div>
+                        <div id="accordion1-content2" class="accordion-body collapse">
+                            <div class="accordion-inner">
+
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-content3">
+                                Видео
+                            </a>
+                        </div>
+                        <div id="accordion1-content3" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <?php
+                                echo $this->partial('/application/index/lib/about/video-divbox.phtml');
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading "  >
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-content4">
+                                Фотоальбом
+                            </a>
+                        </div>
+                        <div id="accordion1-content4" class="accordion-body collapse" >
+                            <div class="accordion-inner">
+
+                                <div id="asm-trends" class="tabbable tabs-left">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#about-photo-album1" data-toggle="tab">Работники цеха</a></li>
+<!--                                            <li class="" ><a href="#about-photo-album2" data-toggle="tab">Праздник 9 Мая 2013г. </a></li>-->
+                                        <li class="" ><a href="#about-photo-album3" data-toggle="tab">День Химика 2013г.</a></li>
+                                    </ul>
+                                    <div class="tab-content  tab-touchtouch">
+                                        <!--  about-photo-album1 -->
+                                        <div class="tab-pane active" id="about-photo-album1">
+                                            <?php echo $this->partial('/application/index/lib/about/photo-album1.phtml'); ?> 
+                                        </div>
+                                        <!--  about-photo-album2 -->
+                                        <div class="tab-pane" id="about-photo-album2">
+                                            <?php echo $this->partial('/application/index/lib/about/photo-album2.phtml'); ?> 
+                                        </div>
+                                        <!--  about-photo-album3 -->
+                                        <div class="tab-pane" id="about-photo-album3">
+                                            <?php echo $this->partial('/application/index/lib/about/photo-album3.phtml'); ?> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--                        <div class="accordion-group">
+                        <div class="accordion-heading "  >
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-content5">
+                                Контакты
+                            </a>
+                        </div>
+                        <div id="accordion1-content5" class="accordion-body collapse" >
+                            <div class="accordion-inner">
+                                <?php // echo $this->partial('/application/index/lib/about/contacts.phtml');?> 
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <?php echo $this->partial('/application/index/lib/home/articles-post.phtml'); ?>
+    </div>    
+</section>
+<!-- content -->
+
+
+

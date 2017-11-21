@@ -1,0 +1,55 @@
+<!--Set a layout variable-->
+<?php 
+$this->layout()->section = "reports";
+?>
+
+<!-- breadcrumbs  -->
+<?php echo $this->partial('/asm/asm/lib/reports/breadcrumbs.phtml'); ?>
+<!-- content -->
+<section id="content">
+    <div class="wrapper">
+        <div class="box_shadow">
+            <div class="box">
+                <div class="wrapper">
+                    <header class="title">
+                        <h2>Отчеты</h2>
+                    </header>
+                    <form class="">
+                        <fieldset>
+                            <legend>Месячные</legend>
+                            <div class="input-append">
+                                <p><input class="report-check" type="checkbox" value=""><span class="uneditable-input span4">Производство HNO3</span><a href="<?php echo $this->GetReportURL('monthHNO3_M5-html'); ?>" target="_blank" class="btn btn-primary">Открыть</a><a href="<?php echo $this->GetReportURL('monthHNO3_M5-xls'); ?>" class="btn btn-inverse" >Загрузить</a><img></img>  </p>
+                                <p><input class="report-check" type="checkbox" value=""><span class="uneditable-input span4">Газ. аммиак по цеху</span><a href="<?php echo $this->GetReportURL('monthAllGAM_M5-html'); ?>" target="_blank" class="btn btn-primary">Открыть</a><a href="<?php echo $this->GetReportURL('monthAllGAM_M5-xls'); ?>" class="btn btn-inverse">Загрузить</a><img></img></p>
+                                <p><input class="report-check" type="checkbox" value=""><span class="uneditable-input span4">Газ. аммиак по агрегатам</span><a href="<?php echo $this->GetReportURL('monthAgrGAM_M5-html'); ?>" target="_blank" class="btn btn-primary">Открыть</a><a href="<?php echo $this->GetReportURL('monthAgrGAM_M5-xls'); ?>" class="btn btn-inverse">Загрузить</a><img></img></p>
+                                <p><input class="report-check" type="checkbox" value=""><span class="uneditable-input span4">Жидкий аммиак</span><a href="<?php echo $this->GetReportURL('monthAllJAM_M5-html'); ?>" target="_blank" class="btn btn-primary">Открыть</a><a href="<?php echo $this->GetReportURL('monthAllJAM_M5-xls'); ?>" class="btn btn-inverse">Загрузить</a><img></img></p>
+                                <p><input class="report-check" type="checkbox" value=""><span class="uneditable-input span4">Расходные коэфициенты</span><a href="<?php echo $this->GetReportURL('monthRashodK_M5-html'); ?>" target="_blank" class="btn btn-primary">Открыть</a><a href="<?php echo $this->GetReportURL('monthRashodK_M5-xls'); ?>" class="btn btn-inverse">Загрузить</a><img></img></p>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <form class="">
+                        <fieldset>
+                            <legend>Суточные</legend>
+                            <div class="input-append">
+                                <p><input class="report-check" type="checkbox" value="" checked><span class="uneditable-input span4">М5-2 (Потребляемые ресурсы) для Бюро Учета</span><a href="<?php echo $this->GetReportURL('dailyResourcesM5_2-html'); ?>" class="btn btn-primary" target="_blank">Открыть</a><a href="<?php echo $this->GetReportURL('dailyResourcesM5_2-html'); ?>" class="btn btn-inverse print-this">Печатать</a><img src="<?php echo $this->basePath() . '/img/system/loading.gif' ?> " class="wait-loading-data" /></p>
+                                <p><input class="report-check" type="checkbox" value="" checked><span class="uneditable-input span4">М5-2 (Выработка) для Бюро Учета</span><a href="<?php echo $this->GetReportURL('dailyProductionM5_2-html'); ?>" class="btn btn-primary" target="_blank">Открыть</a><a href="<?php echo $this->GetReportURL('dailyProductionM5_2-html'); ?>" class="btn btn-inverse print-this">Печатать</a><img src="<?php echo $this->basePath() . '/img/system/loading.gif' ?> " class="wait-loading-data" /></p>
+                                <p><input class="report-check" type="checkbox" value="" checked><span class="uneditable-input span4">М5-2 (Параметры ПГ) для Бюро Учета</span><a href="<?php echo $this->GetReportURL('dailyNGParamsM5_2-html'); ?>" class="btn btn-primary" target="_blank">Открыть</a><a href="<?php echo $this->GetReportURL('dailyNGParamsM5_2-html'); ?>" class="btn btn-inverse print-this">Печатать</a><img src="<?php echo $this->basePath() . '/img/system/loading.gif' ?> " class="wait-loading-data" /></p>
+                                <p><input class="report-check" type="checkbox" value="" checked><span class="uneditable-input span4">М5-1 (Средние значения) для Бюро Учета</span><a href="<?php echo $this->GetReportURL('dailyAvgM5_1-html'); ?>" target="_blank" class="btn btn-primary">Открыть</a><a href="<?php echo $this->GetReportURL('dailyAvgM5_1-html'); ?>" class="btn btn-inverse print-this">Печатать</a><img src="<?php echo $this->basePath() . '/img/system/loading.gif' ?> " class="wait-loading-data" /></p>
+                                <p><input class="report-check" type="checkbox" value=""><span class="uneditable-input span4">М5-1 (Суммарные значения)</span><a href="<?php echo $this->GetReportURL('dailySumM5_1-html'); ?>" class="btn btn-primary" target="_blank">Открыть</a><a href="<?php echo $this->GetReportURL('dailySumM5_1-html'); ?>" class="btn btn-inverse print-this">Печатать</a><img src="<?php echo $this->basePath() . '/img/system/loading.gif' ?> " class="wait-loading-data" /></p>
+                                <p><input class="report-check" type="checkbox" value=""><span class="uneditable-input span4">М7-2 (Суммарные значения)</span><a href="<?php echo $this->GetReportURL('dailySumM7_2-html'); ?>" class="btn btn-primary" target="_blank">Открыть</a><a href="<?php echo $this->GetReportURL('dailySumM7_2-html'); ?>" class="btn btn-inverse print-this">Печатать</a><img src="<?php echo $this->basePath() . '/img/system/loading.gif' ?> " class="wait-loading-data" /></p>
+                                <p><input class="report-check" type="checkbox" value=""><span class="uneditable-input span4">М7-1 (Суммарные значения)</span><a href="<?php echo $this->GetReportURL('dailySumM7_1-html'); ?>" class="btn btn-primary" target="_blank">Открыть</a><a href="<?php echo $this->GetReportURL('dailySumM7_1-html'); ?>" class="btn btn-inverse print-this">Печатать</a><img src="<?php echo $this->basePath() . '/img/system/loading.gif' ?> " class="wait-loading-data" /></p>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <?php echo $this->partial('/application/index/lib/home/articles-post.phtml'); ?>
+    </div>    
+</section>
+<!-- content -->
+
+
+

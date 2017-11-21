@@ -1,0 +1,495 @@
+<!-- ОЦ -->
+<div  class="tabbable tabs-left">
+    <ul class="nav nav-tabs">
+        <li class="<?php if ($this->tabActive == 'ammonia-gas') {echo 'active';} ?>"  ><a href="#ammonia-gas" data-toggle="tab">Газообразный аммиак</a></li>
+        <li class="<?php if ($this->tabActive == 'ammonia-liq') {echo 'active';} ?>" ><a href="#ammonia-liq" data-toggle="tab">Жидкий аммиак</a></li>
+        <li class="<?php if ($this->tabActive == 'natural-gas') {echo 'active';} ?>" ><a href="#natural-gas" data-toggle="tab">Природный газ</a></li>
+        <li class="<?php if ($this->tabActive == 'par16') {echo 'active';} ?>" ><a href="#par16" data-toggle="tab">Пар16</a></li>
+        <li class="<?php if ($this->tabActive == 'sklad') {echo 'active';} ?>" ><a href="#sklad" data-toggle="tab">HNO3 Склад</a></li>
+        <li class="<?php if ($this->tabActive == 'hno3-m9') {echo 'active';} ?>" ><a href="#hno3-m9" data-toggle="tab">HNO3 М9</a></li>
+        <li class="<?php if ($this->tabActive == 'voda') {echo 'active';} ?>" ><a href="#voda" data-toggle="tab">Вода</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <!--  AMMONIA_GAS -->
+        <div class="tab-pane <?php if ($this->tabActive == 'ammonia-gas') {echo 'active';} ?>" id="ammonia-gas">
+            <div class="accordion" id="accordion1">
+                <div class="accordion-group">
+                    <div class="accordion-heading "  >
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content1">
+                            Давление газ. NH3
+                        </a>
+                    </div>
+                    <div id="accordion1-content1" class="accordion-body collapse" >
+                        <div id="02NH3_P4" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content2">
+                            Температура газ. NH3
+                        </a>
+                    </div>
+                    <!-- stock-container    -->
+                    <div id="accordion1-content2" class="accordion-body collapse">
+                        <div id="02NH3_T4" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content3">
+                            Расход газ. NH3
+                        </a>
+                    </div>
+                    <!-- stock-container    -->
+                    <div id="accordion1-content3" class="accordion-body collapse">
+                        <div id="02NH3_F4" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  AMMONIA-LIQ -->
+        <div class="tab-pane <?php if ($this->tabActive == 'ammonia-liq') {echo 'active';} ?>" id="ammonia-liq">
+            <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content1">
+                            Давление ЖА-1
+                        </a>
+                    </div>
+                    <div id="accordion2-content1" class="accordion-body collapse" >
+                        <div id="02JAM_P21_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content2">
+                            Температура ЖА-1
+                        </a>
+                    </div>
+                    <div id="accordion2-content2" class="accordion-body collapse">
+                        <div id="02JAM_T21_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content3">
+                            Расход ЖА-1
+                        </a>
+                    </div>
+                    <div id="accordion2-content3" class="accordion-body collapse">
+                        <div id="02JAM_F21_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content4">
+                            Давление ЖА-2
+                        </a>
+                    </div>
+                    <div id="accordion2-content4" class="accordion-body collapse" >
+                        <div id="02JAM_P21_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content5">
+                            Температура ЖА-2
+                        </a>
+                    </div>
+                    <div id="accordion2-content5" class="accordion-body collapse">
+                        <div id="02JAM_T21_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content6">
+                            Расход ЖА-2
+                        </a>
+                    </div>
+                    <div id="accordion2-content6" class="accordion-body collapse">
+                        <div id="02JAM_F21_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  NATURAL-GAZ -->
+        <div class="tab-pane  <?php if ($this->tabActive == 'natural-gas') {echo 'active';} ?>" id="natural-gas">
+            <div class="accordion" id="accordion3">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion3-content1">
+                            Давление ПГ
+                        </a>
+                    </div>
+                    <div id="accordion3-content1" class="accordion-body collapse" >
+                        <div  id="02PGAZ_P5" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion3-content2">
+                            Температура ПГ
+                        </a>
+                    </div>
+                    <div id="accordion3-content2" class="accordion-body collapse">
+                        <div id="02PGAZ_T16" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion3-content3">
+                            Расход ПГ
+                        </a>
+                    </div>
+                    <div id="accordion3-content3" class="accordion-body collapse">
+                        <div id="02PGAZ_F5" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  PAR16 -->
+        <div class="tab-pane <?php if ($this->tabActive == 'par16') {echo 'active';} ?>" id="par16">
+            <div class="accordion" id="accordion4">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content1">
+                            Давление ПАР16-1
+                        </a>
+                    </div>
+                    <div id="accordion4-content1" class="accordion-body collapse" >
+                        <div id="02PAR_P2_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content2">
+                            Температура ПАР16-1
+                        </a>
+                    </div>
+                    <div id="accordion4-content2" class="accordion-body collapse">
+                        <div id="02PAR_T2_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content3">
+                            Расход ПАР16-1
+                        </a>
+                    </div>
+                    <div id="accordion4-content3" class="accordion-body collapse">
+                        <div id="02PAR_F2_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content4">
+                            Давление ПАР16-2
+                        </a>
+                    </div>
+                    <div id="accordion4-content4" class="accordion-body collapse" >
+                        <div id="02PAR_P2_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content5">
+                            Температура ПАР16-2
+                        </a>
+                    </div>
+                    <div id="accordion4-content5" class="accordion-body collapse">
+                        <div id="02PAR_T2_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content6">
+                            Расход ПАР16-2
+                        </a>
+                    </div>
+                    <div id="accordion4-content6" class="accordion-body collapse">
+                        <div id="02PAR_F2_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  SKLAD --> 
+        <div class="tab-pane  <?php if ($this->tabActive == 'sklad') {echo 'active';} ?>" id="sklad">
+            <div class="accordion" id="accordion5">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion5-content1">
+                            Склад 1(отделение)
+                        </a>
+                    </div>
+                    <div id="accordion5-content1" class="accordion-body collapse" >
+                        <div  id="01SKLAD_L26" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion5-content2">
+                            Склад 2(отделение)
+                        </a>
+                    </div>
+                    <div id="accordion5-content2" class="accordion-body collapse">
+                        <div id="02SKLAD_L26" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion5-content3">
+                            Склад 1+2(отделения)
+                        </a>
+                    </div>
+                    <div id="accordion5-content3" class="accordion-body collapse">
+                        <div id="02SKLAD_SUM" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  HNO3-M9 -->
+        <div class="tab-pane  <?php if ($this->tabActive == 'hno3-m9') {echo 'active';} ?>" id="hno3-m9">
+            <div class="accordion" id="accordion6">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content1">
+                            Расход HNO3 выдача на М9-1
+                        </a>
+                    </div>
+                    <div id="accordion6-content1" class="accordion-body collapse" >
+                        <div  id="02HNO3_F20_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content2">
+                            Расход HNO3 выдача на М9-2
+                        </a>
+                    </div>
+                    <div id="accordion6-content2" class="accordion-body collapse">
+                        <div id="02HNO3_F20_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------->
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content3">
+                            Давление HNO3 на складе-1
+                        </a>
+                    </div>
+                    <div id="accordion6-content3" class="accordion-body collapse">
+                        <div id="02HNO3_P20_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content4">
+                            Давление HNO3 на складе-2
+                        </a>
+                    </div>
+                    <div id="accordion6-content4" class="accordion-body collapse">
+                        <div id="02HNO3_P20_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content5">
+                            Давление HNO3 на башне-1
+                        </a>
+                    </div>
+                    <div id="accordion6-content5" class="accordion-body collapse">
+                        <div id="02HNO3_P22_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content6">
+                            Давление HNO3 на башне-2
+                        </a>
+                    </div>
+                    <div id="accordion6-content6" class="accordion-body collapse">
+                        <div id="02HNO3_P22_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content7">
+                            Концентрация HNO3 на складе
+                        </a>
+                    </div>
+                    <div id="accordion6-content7" class="accordion-body collapse">
+                        <div id="02HNO3_Q20" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content8">
+                            Температура HNO3 на складе
+                        </a>
+                    </div>
+                    <div id="accordion6-content8" class="accordion-body collapse">
+                        <div id="02HNO3_T20" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  VODA -->
+        <div class="tab-pane  <?php if ($this->tabActive == 'voda') {echo 'active';} ?>" id="voda">
+            <div class="accordion" id="accordion7">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content1">
+                            Давление XOB
+                        </a>
+                    </div>
+                    <div id="accordion7-content1" class="accordion-body collapse" >
+                        <div  id="02XOB_P4" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content2">
+                            Температура XOB
+                        </a>
+                    </div>
+                    <div id="accordion7-content2" class="accordion-body collapse">
+                        <div id="02XOB_T1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content3">
+                            Расход XOB
+                        </a>
+                    </div>
+                    <div id="accordion7-content3" class="accordion-body collapse">
+                        <div id="02XOB_F1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content4">
+                            Температура OB-1
+                        </a>
+                    </div>
+                    <div id="accordion7-content4" class="accordion-body collapse">
+                        <div id="02OB_T1_1" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <center><span class="tag-value text-success" ></span></center>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content5">
+                            Температура OB-2
+                        </a>
+                    </div>
+                    <div id="accordion7-content5" class="accordion-body collapse">
+                        <div id="02OB_T1_2" class="accordion-inner">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
