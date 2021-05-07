@@ -89,7 +89,7 @@ class BaseController extends AbstractActionController {
      * @var string
      */
     protected $_strBox = null;
-
+    
     /**
      * Инициализация контроллера
      */
@@ -110,7 +110,7 @@ class BaseController extends AbstractActionController {
 
         // Получим класс для работы со строками
         $this->_strBox = $this->StrBoxPlugin()->getClass();
-
+        
         // Получить View\Model и Layout
         $this->_view = new ViewModel();
         $this->_layout = $this->layout();
@@ -127,19 +127,7 @@ class BaseController extends AbstractActionController {
      */
     protected function _setViewParams() {
         
-        // Set documentation url
-        $url_doc = $this->_getUrlDoc();
-        $this->_layout->url_doc = $url_doc;
-        
         // Зададим тип схемы расцветки сайта
-        // Если схема="yellow-dark-blue" то, is_icon_white = FALSE
-        // Если схема="yellow-dark-blue" то, в стиле mystyle.css нужно установить:
-        // a:hover {color: black;} a:link {color: black;} a:visited {color: black;}
-        
-        // Если схема="red-dark-blue" то, is_icon_white = TRUE
-        // Если схема="red-dark-blue" то, в стиле mystyle.css нужно установить:
-        // a:hover {color: white;} a:link {color: white;} a:visited {color: white;}
-        
         $this->_layout->scheme = "yellow-dark-blue";//  red-dark-blue, yellow-dark-blue
         $this->_layout->is_icon_white = FALSE;
         
@@ -210,28 +198,6 @@ class BaseController extends AbstractActionController {
         }
 
         return $result;
-    }
-    
-    /**
-     * Получить URL документации
-     * zf-myblog:8080
-     * zf-myblog.srv:8080
-     * zf-myblog.srv2:8080
-     *
-     * @return string 
-     */
-    private function _getUrlDoc() {
-        $urlDoc = 'http://zf-myblog';
-        //-----------------------
-        $host = $this->_request->getUri()->getHost();
-        $port = $this->_request->getUri()->getPort();
-        $arrHost = explode('.', $host);
-        if(count($arrHost) > 1){
-           $ext = 'srv2';
-           return "{$urlDoc}.{$ext}:{$port}";
-        }  else {
-            return "{$urlDoc}:{$port}";
-        }
     }
 
     /**

@@ -40,6 +40,10 @@ return array(
         'driver' => 'Pdo_Sqlite',
         'database' => '/www_m5/db_data/hist_m5.db'
     ),
+    'Asm\db\real\hist2' => array(
+        'driver' => 'Pdo_Sqlite',
+        'database' => '/www_m5/db_data2/hist_m5.db'
+    ),
     'Asm\db\test\hist' => array(
         'driver' => 'Pdo_Sqlite',
         'database' => GLOBAL_PATH . '/cli-mon-rsu/test/db/hist_m5.db' 

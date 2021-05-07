@@ -94,23 +94,23 @@
 
 
 /* IE6 FixPNG */
-*html .divbox_default .closed{
+html .divbox_default .closed{
 	background-image: none;
 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/close.png');
 }
-*html .divbox_default .prev{
+html .divbox_default .prev{
 	background-image: none;
 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/left.png');
 }
-*html .divbox_default .prevDisabled{
+html .divbox_default .prevDisabled{
 	background-image: none;
 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/leftDisabled.png');
 }
-*html .divbox_default .next{
+html .divbox_default .next{
 	background-image: none;
 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/right.png');
 }
-*html .divbox_default .nextDisabled{
+html .divbox_default .nextDisabled{
 	background-image: none;
 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/rightDisabled.png');
 }

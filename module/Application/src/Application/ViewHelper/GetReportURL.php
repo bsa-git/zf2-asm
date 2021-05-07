@@ -137,7 +137,7 @@ class GetReportURL extends AbstractHelper {
                 // Изменим кодировку файла на UTF8
                 $file = $pathDir . '/' . $listFiles[0];
                 $str_file = $this->getFileEncodingUTF8($file);
-                if (is_file($file) && $str_file) {
+                if ($str_file) {
                     file_put_contents($file, $str_file);
                 }
             }
@@ -154,7 +154,7 @@ class GetReportURL extends AbstractHelper {
                 // Изменим кодировку файла на UTF8
                 $file = $pathDir . '/' . $listFiles[0];
                 $str_file = $this->getFileEncodingUTF8($file);
-                if (is_file($file) && $str_file) {
+                if ($str_file) {
                     file_put_contents($file, $str_file);
                 }
             }
@@ -231,9 +231,6 @@ class GetReportURL extends AbstractHelper {
     private function getFileEncodingUTF8($aFilename) {
 
         //----------------------
-        if(!is_file($aFilename)){
-            return "";
-        }
         $content = file_get_contents($aFilename);
         $isWinCoding = substr_count($content, "charset=windows-1251");
         if ($isWinCoding) {

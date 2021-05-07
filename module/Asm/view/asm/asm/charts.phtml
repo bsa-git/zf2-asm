@@ -25,7 +25,7 @@ $this->layout()->is_utility = true;
     addScriptParams('ChartBox', 
     {
         StockChart: [
-            //======== OC ========//
+            //======== OC-02 ========//
             // NH3
             {chart : {renderTo: '02NH3_P4',type: 'spline'}},
             {chart : {renderTo: '02NH3_T4',type: 'spline'}},
@@ -51,8 +51,8 @@ $this->layout()->is_utility = true;
             {chart : {renderTo: '02PAR_T2_2',type: 'spline'}},
             {chart : {renderTo: '02PAR_F2_2',type: 'spline'}},
             // SKLAD
-            {chart : {renderTo: '01SKLAD_L26',type: 'spline'}},
-            {chart : {renderTo: '02SKLAD_L26',type: 'spline'}},
+            {chart : {renderTo: '02SKLAD_01L26',type: 'spline'}},
+            {chart : {renderTo: '02SKLAD_02L26',type: 'spline'}},
             {chart : {renderTo: '02SKLAD_SUM',type: 'spline'}},
             // HNO3 M9
             {chart : {renderTo: '02HNO3_F20_1',type: 'spline'}},
@@ -245,6 +245,87 @@ $this->layout()->is_utility = true;
             {chart : {renderTo: '72NG_F171',type: 'spline'}},
             //EA_RD
             {chart : {renderTo: '72EA_RD',type: 'spline'}},
+            
+            //======== OC-01 ========//
+            // NH3
+            {chart : {renderTo: '01NH3_P4',type: 'spline'}},
+            {chart : {renderTo: '01NH3_T4',type: 'spline'}},
+            {chart : {renderTo: '01NH3_F4',type: 'spline'}},
+            // PGAZ
+            {chart : {renderTo: '01PGAZ_P5',type: 'spline'}},
+            {chart : {renderTo: '01PGAZ_T16',type: 'spline'}},
+            {chart : {renderTo: '01PGAZ_F5',type: 'spline'}},
+            // JAM-1
+            {chart : {renderTo: '01JAM_P21_1',type: 'spline'}},
+            {chart : {renderTo: '01JAM_T21_1',type: 'spline'}},
+            {chart : {renderTo: '01JAM_F21_1',type: 'spline'}},
+            // PAR16-1
+            {chart : {renderTo: '01PAR_P2_1',type: 'spline'}},
+            {chart : {renderTo: '01PAR_T2_1',type: 'spline'}},
+            {chart : {renderTo: '01PAR_F2_1',type: 'spline'}},
+            // PAR16-2
+            {chart : {renderTo: '01PAR_P2_2',type: 'spline'}},
+            {chart : {renderTo: '01PAR_T2_2',type: 'spline'}},
+            {chart : {renderTo: '01PAR_F2_2',type: 'spline'}},
+            // SKLAD
+            {chart : {renderTo: '01SKLAD_01L26',type: 'spline'}},
+            // VODA XOB
+            {chart : {renderTo: '01XOB_P4',type: 'spline'}},
+            {chart : {renderTo: '01XOB_T1',type: 'spline'}},
+            {chart : {renderTo: '01XOB_F1',type: 'spline'}},
+            // VODA OB
+            {chart : {renderTo: '01OB_T1_1',type: 'spline'}},
+            {chart : {renderTo: '01OB_T1_2',type: 'spline'}},
+            //============ AGR 2/1 =========//
+            //PS-180
+            {chart : {renderTo: '21VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '21VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '21VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '21VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '21TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '21VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '21VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '21NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '21NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '21HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '21NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '21EA_RD',type: 'spline'}},
+            //============ AGR 3/1 =========//
+            //PS-180
+            {chart : {renderTo: '31VZ_PS180',type: 'spline'}},
+            //P181
+            {chart : {renderTo: '31VZ_P181',type: 'spline'}},
+            //P127A
+            {chart : {renderTo: '31VZ_P127A',type: 'spline'}},
+            //TS174
+            {chart : {renderTo: '31VZ_TS174',type: 'spline'}},
+            //TS102
+            {chart : {renderTo: '31TS102',type: 'spline'}},
+            //F102
+            {chart : {renderTo: '31VZ_F102',type: 'spline'}},
+            //F103
+            {chart : {renderTo: '31VZ_F103',type: 'spline'}},
+            //F101
+            {chart : {renderTo: '31NH3_F101',type: 'spline'}},
+            //F106
+            {chart : {renderTo: '31NH3_F106',type: 'spline'}},
+            //F105
+            {chart : {renderTo: '31HNO3_F105',type: 'spline'}},
+            //F171
+            {chart : {renderTo: '31NG_F171',type: 'spline'}},
+            //EA_RD
+            {chart : {renderTo: '31EA_RD',type: 'spline'}},
         ]
 
     });
@@ -265,7 +346,7 @@ $this->layout()->is_utility = true;
 
                     <div id="asm-trends" class="tabbable" style="margin-bottom: 18px;">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#oc-02" data-toggle="tab">ОЦ</a></li>
+                            <li class="active"><a href="#oc-02" data-toggle="tab">ОЦ-2</a></li>
                             <li class=""><a href="#agregat-12" data-toggle="tab">Агрегат-1/2</a></li>
                             <li class=""><a href="#agregat-22" data-toggle="tab">Агрегат-2/2</a></li>
                             <li class=""><a href="#agregat-32" data-toggle="tab">Агрегат-3/2</a></li>
@@ -273,9 +354,12 @@ $this->layout()->is_utility = true;
                             <li class=""><a href="#agregat-52" data-toggle="tab">Агрегат-5/2</a></li>
                             <li class=""><a href="#agregat-62" data-toggle="tab">Агрегат-6/2</a></li>
                             <li class=""><a href="#agregat-72" data-toggle="tab">Агрегат-7/2</a></li>
+                            <li class=""><a href="#oc-01" data-toggle="tab">ОЦ-1</a></li>
+                            <li class=""><a href="#agregat-21" data-toggle="tab">Агрегат-2/1</a></li>
+                            <li class=""><a href="#agregat-31" data-toggle="tab">Агрегат-3/1</a></li>
                         </ul>
                         <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
-                            <!--  OC -->
+                            <!--  OC-2 -->
                             <div class="tab-pane active" id="oc-02">
                                 <?php echo $this->partial('/asm/asm/lib/charts/oc-02.phtml'); ?>
                             </div>    
@@ -299,6 +383,16 @@ $this->layout()->is_utility = true;
                             </div>
                             <div class="tab-pane" id="agregat-72">
                                 <?php echo $this->partial('/asm/asm/lib/charts/agregat-72.phtml'); ?>
+                            </div>
+                            <!--  OC-1 -->
+                            <div class="tab-pane" id="oc-01">
+                                <?php echo $this->partial('/asm/asm/lib/charts/oc-01.phtml'); ?>
+                            </div>    
+                            <div class="tab-pane" id="agregat-21">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-21.phtml'); ?>
+                            </div>
+                            <div class="tab-pane" id="agregat-31">
+                                <?php echo $this->partial('/asm/asm/lib/charts/agregat-31.phtml'); ?>
                             </div>
                         </div>
                     </div>

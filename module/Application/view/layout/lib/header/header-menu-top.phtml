@@ -6,7 +6,6 @@
             <li id="<?php if($this->section == 'trends'){echo 'menu_active';}?>"><a href="<?php echo $this->basePath() . "/index.php/asm/charts?tab=ammonia-gas"; ?>" style="width: 110px;"><i class="icon-signal <?php if($this->is_icon_white){echo 'icon-white';}?>"></i> Графики</a></li>
             <li id="<?php if($this->section == 'reports'){echo 'menu_active';}?>"><a href="<?php echo $this->basePath() . "/index.php/asm/reports";?>" style="width: 100px;"><i class="icon-list-alt <?php if($this->is_icon_white){echo 'icon-white';}?>"></i> Отчеты</a></li>
             <li id="<?php if($this->section == 'dcs'){echo 'menu_active';}?>"><a href="<?php echo $this->basePath() . "/index.php/asm/dcs?tab=dcs_10-60-0-201";?>" style="width: 230px;"><i class="icon-th-list <?php if($this->is_icon_white){echo 'icon-white';}?>"></i> Станции сбора данных</a></li>
-            <li><a href="<?php echo $this->url_doc;?>" target="_blank" style="width: 150px;"><i class="icon-book <?php if($this->is_icon_white){echo 'icon-white';}?>"></i> Документация</a></li>
             <li id="<?php if($this->section == 'about'){echo 'menu_active';}?>"><a href="<?php echo $this->basePath() . "/index.php/index/about";?>" style="width: 100px;"><i class="icon-info-sign <?php if($this->is_icon_white){echo 'icon-white';}?>"></i> <?php echo $this->translate('About us');?></a></li>
         </ul>
     </nav>

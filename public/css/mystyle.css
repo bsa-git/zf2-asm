@@ -3,20 +3,9 @@
     padding-bottom: 40px;
 }*/
 
-a:hover { /* Цвет наведенных ссылок */
+a:hover {
     text-decoration: none;
-    color: black;
-    /*color: white;*/
-}
-
-a:link { /* Цвет ссылок */
-    color: black; 
-    /*color: white;*/
-}
-
-a:visited { /* Цвет посещенных ссылок */
-    color: black; 
-    /*color: white;*/
+    color: #ffffff;
 }
 
 .box ul.nav li.active a {

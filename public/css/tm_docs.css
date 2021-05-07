@@ -766,7 +766,7 @@ background-color:#07526e;
 .tm_style_3.btn-warning:active::before{box-shadow:inset 0px 1px 0px #fbb450, 0px 5px 0px 0px #82510d, 1px 1px 0px 0px #82510d,2px 2px 0px 0px #82510d,2px 5px 0px 0px #82510d,6px 4px 2px rgba(0,0,0,.5),0px 10px 5px #999 ;}
 
 #advanced .dropdown-menu li li a {
-  display: inline-block\0/;
+  display: inline-block;
 }
 .tm_style_4 {
     background-color:#E0E0E0;
