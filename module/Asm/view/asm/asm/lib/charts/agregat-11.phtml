@@ -2,7 +2,7 @@
 <div class="tabbable tabs-left">
     <ul class="nav nav-tabs">
         <!--<li><a href="#compression-21" data-toggle="tab">Компрессия</a></li>-->
-        <li class="active"><a href="#conversion-11" data-toggle="tab">Конверсия</a></li>
+        <li class="active"><a href="#conversion-11" data-toggle="tab"><?php echo $this->translate('Conversion');?></a></li>
     </ul>
     <div class="tab-content">
         <!--  COMPRESSION-11 -->
@@ -112,7 +112,7 @@
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2_11-content3">
-                            Расход NH3 в смеситель (F-101)
+                        <?php echo $this->translate('NH3 consumption in the mixer');?> (F-101)
                         </a>
                     </div>
                     <div id="accordion2_11-content3" class="accordion-body collapse">

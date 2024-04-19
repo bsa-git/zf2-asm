@@ -73,7 +73,7 @@ return array(
         ),
     ),
     'translator' => array(
-        'locale' => 'ru_RU',
+        'locale' => 'ua_UA',
         'translation_file_patterns' => array(
             array(
                 'type' => 'phpArray',//'gettext'

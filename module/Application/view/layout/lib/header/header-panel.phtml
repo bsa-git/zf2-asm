@@ -8,70 +8,69 @@
             <div class="container">
                 <ul class="nav">
                     <li class="divider-vertical"></li>
-<!--                    <li class="<?php if ($this->section == "home") {echo "active";} ?>"><a href="<?php echo $this->url('home') ?>"><i class="icon-home icon-white"></i> <?php echo $this->translate('Home') ?></a></li>-->
                     <li class="<?php if ($this->section == "trends") {echo "active";} ?> dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-signal icon-white"></i> Графики <b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-signal icon-white"></i> <?php echo $this->translate('Charts');?><b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=ammonia-gas" ?>">Газообразный аммиак</a></li>
-                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=ammonia-liq" ?>">Жидкий аммиак</a></li>
-                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=natural-gas" ?>">Природный газ</a></li>
-                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=par16" ?>">Пар16</a></li>
-                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=sklad" ?>">Склад</a></li>
-                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=hno3-m9" ?>">HNO3 в М9</a></li>
-                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=voda" ?>">Вода</a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=ammonia-gas" ?>"><?php echo $this->translate('Gaseous ammonia');?></a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=ammonia-liq" ?>"><?php echo $this->translate('Liquid ammonia');?></a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=natural-gas" ?>"><?php echo $this->translate('Natural gas');?></a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=par16" ?>"><?php echo $this->translate('Par16');?></a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=sklad" ?>"><?php echo $this->translate('Storage');?></a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=hno3-m9" ?>"><?php echo $this->translate('HNO3 in M9');?></a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/charts?tab=voda" ?>"><?php echo $this->translate('Water');?></a></li>
                         </ul>
                     </li>
                     <li class="<?php if ($this->section == "reports") {echo "active";} ?> dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list-alt icon-white"></i> Отчеты <b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-list-alt icon-white"></i> <?php echo $this->translate('Reports');?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo $this->basePath() . "/asm/reports" ?>">Все...</a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/reports" ?>"><?php echo $this->translate('All');?></a></li>
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Месячные</a>
+                                <a tabindex="-1" href="#"><?php echo $this->translate('Monthly reports');?></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?php echo $this->GetReportURL('monthHNO3_M5-html'); ?>" target="_blank">Производство HNO3</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('monthAllGAM_M5-html'); ?>" target="_blank">Газ. аммиак по цеху</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('monthAgrGAM_M5-html'); ?>" target="_blank">Газ. аммиак по агрегатам</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('monthAllJAM_M5-html'); ?>" target="_blank">Жидкий аммиак</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('monthRashodK_M5-html'); ?>" target="_blank">Расходные коэфициенты</a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('monthHNO3_M5-html'); ?>" target="_blank"><?php echo $this->translate('HNO3 production');?></a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('monthAllGAM_M5-html'); ?>" target="_blank"><?php echo $this->translate('Gas. ammonia on the shop');?></a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('monthAgrGAM_M5-html'); ?>" target="_blank"><?php echo $this->translate('Gas. ammonia by aggregates');?></a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('monthAllJAM_M5-html'); ?>" target="_blank"><?php echo $this->translate('Liquid ammonia');?></a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('monthRashodK_M5-html'); ?>" target="_blank"><?php echo $this->translate('Consumption coefficients');?></a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Суточные</a>
+                                <a tabindex="-1" href="#"><?php echo $this->translate('Daily reports');?></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?php echo $this->GetReportURL('dailyAvgM5_1-html'); ?>" target="_blank">М5-1 (Средние значения)</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('dailySumM5_1-html'); ?>" target="_blank">М5-1 (Суммарные значения)</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('dailyResourcesM5_2-html'); ?>" target="_blank">М5-2 (Потребляемые ресурсы)</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('dailyProductionM5_2-html'); ?>" target="_blank">М5-2 (Выработка)</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('dailyNGParamsM5_2-html'); ?>" target="_blank">М5-2 (Параметры ПГ)</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('dailySumM7_1-html'); ?>" target="_blank">М7-1 (Суммарные значения)</a></li>
-                                    <li><a href="<?php echo $this->GetReportURL('dailySumM7_2-html'); ?>" target="_blank">М7-2 (Суммарные значения)</a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('dailyAvgM5_1-html'); ?>" target="_blank">М5-1 <?php echo $this->translate('Average values for accounting');?></a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('dailySumM5_1-html'); ?>" target="_blank">М5-1 (<?php echo $this->translate('Total values');?>)</a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('dailyResourcesM5_2-html'); ?>" target="_blank">М5-2 <?php echo $this->translate('Resources consumed');?></a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('dailyProductionM5_2-html'); ?>" target="_blank">М5-2 <?php echo $this->translate('Development for accounting');?></a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('dailyNGParamsM5_2-html'); ?>" target="_blank">М5-2 <?php echo $this->translate('PG Parameters');?></a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('dailySumM7_1-html'); ?>" target="_blank">М7-1 (<?php echo $this->translate('Total values');?>)</a></li>
+                                    <li><a href="<?php echo $this->GetReportURL('dailySumM7_2-html'); ?>" target="_blank">М7-2 (<?php echo $this->translate('Total values');?>)</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="<?php if ($this->section == "dcs") {echo "active";} ?> dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-th-list icon-white"></i> Станции сбора данных <b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-th-list icon-white"></i> <?php echo $this->translate('Data collection stations');?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo $this->basePath() . "/asm/dcs?tab=dcs_10-60-0-201" ?>">Все...</a></li>
+                            <li><a href="<?php echo $this->basePath() . "/asm/dcs?tab=dcs_10-60-0-201" ?>"><?php echo $this->translate('All');?></a></li>
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Цех М9</a>
+                                <a tabindex="-1" href="#"><?php echo $this->translate('Workshop');?> М9</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://10.60.0.182" target="_blank">Цех М5-1(отделение)</a></li>
+                                    <li><a href="http://10.60.0.182" target="_blank"><?php echo $this->translate('Workshop');?> М5-1(<?php echo $this->translate('department');?>)</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
                                 <a tabindex="-1" href="#">Цех М7</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://10.60.0.216/operator.htm" target="_blank">Цех М7-1(отделение)</a></li>
-                                    <li><a href="http://10.60.0.217/operator.htm" target="_blank">Цех М7-2(отделение)</a></li>
+                                    <li><a href="http://10.60.0.216/operator.htm" target="_blank"><?php echo $this->translate('Workshop');?> М7-1(<?php echo $this->translate('department');?>)</a></li>
+                                    <li><a href="http://10.60.0.217/operator.htm" target="_blank"><?php echo $this->translate('Workshop');?> М7-2(<?php echo $this->translate('department');?>)</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
                                 <a tabindex="-1" href="#">Цех A3</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://10.60.0.55/operator.htm" target="_blank">Цех A3-1</a></li>
-                                    <li><a href="http://10.60.0.56/operator.htm" target="_blank">Цех A3-2</a></li>
-                                    <li><a href="http://10.60.0.57/operator.htm " target="_blank">Цех A3-3</a></li>
+                                    <li><a href="http://10.60.0.55/operator.htm" target="_blank"><?php echo $this->translate('Workshop');?> A3-1</a></li>
+                                    <li><a href="http://10.60.0.56/operator.htm" target="_blank"><?php echo $this->translate('Workshop');?> A3-2</a></li>
+                                    <li><a href="http://10.60.0.57/operator.htm " target="_blank"><?php echo $this->translate('Workshop');?> A3-3</a></li>
                                 </ul>
                             </li>
                         </ul>

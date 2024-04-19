@@ -12,7 +12,7 @@ $this->layout()->section = "dcs";
             <div class="box">
                 <div class="wrapper">
                     <header class="title">
-                        <h2>Станции сбора данных</h2>
+                        <h2><?php echo $this->translate('Data collection stations');?></h2>
                     </header>
 
                     <div class="accordion" id="accordion1">
@@ -20,7 +20,7 @@ $this->layout()->section = "dcs";
                             <div class="accordion-heading "  >
                                 <center><span class="tag-value text-success" ></span></center>
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content1">
-                                    Цех М9
+                                <?php echo $this->translate('Workshop');?> М9
                                 </a>
                             </div>
                             <div id="accordion1-content1" class="accordion-body collapse in" >
@@ -33,7 +33,7 @@ $this->layout()->section = "dcs";
                             <div class="accordion-heading">
                                 <center><span class="tag-value text-success" ></span></center>
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content2">
-                                    Цех М7-1(отделение)
+                                <?php echo $this->translate('Workshop');?> М7-1(<?php echo $this->translate('department');?>)
                                 </a>
                             </div>
                             <!-- stock-container    -->
@@ -47,7 +47,7 @@ $this->layout()->section = "dcs";
                             <div class="accordion-heading">
                                 <center><span class="tag-value text-success" ></span></center>
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content3">
-                                    Цех М7-2(отделение)
+                                <?php echo $this->translate('Workshop');?> М7-2(<?php echo $this->translate('department');?>)
                                 </a>
                             </div>
                             <div id="accordion1-content3" class="accordion-body collapse">

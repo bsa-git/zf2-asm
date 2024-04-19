@@ -31,6 +31,10 @@ return array(
     
     //--- Languages  Config ----
     'languages' => array(
+        'ua' => array(
+            'name' => 'ukrainian',
+            'locale' => 'ua_UA',
+        ),
         'ru' => array(
             'name' => 'russian',
             'locale' => 'ru_RU',

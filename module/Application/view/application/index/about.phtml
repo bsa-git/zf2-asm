@@ -46,7 +46,7 @@ $this->layout()->is_slider_flex = true;
         <div class="box_shadow">
             <div class="box">
                 <header class="title">
-                    <h2>Информация о цехе М-5</h2>
+                    <h2><?php echo $this->translate('Workshop Information');?> М-5</h2>
                 </header>
                 <div class="hero-unit">
                     <?php
@@ -58,7 +58,7 @@ $this->layout()->is_slider_flex = true;
                     <div class="accordion-group">
                         <div class="accordion-heading "  >
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-content1">
-                                Наша история
+                            <?php echo $this->translate('Our story');?>
                             </a>
                         </div>
                         <div id="accordion1-content1" class="accordion-body collapse" >
@@ -84,23 +84,9 @@ $this->layout()->is_slider_flex = true;
                         </div>
                     </div>-->
                     <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-content3">
-                                Видео
-                            </a>
-                        </div>
-                        <div id="accordion1-content3" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <?php
-                                echo $this->partial('/application/index/lib/about/video-divbox.phtml');
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
                         <div class="accordion-heading "  >
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1-content4">
-                                Фотоальбом
+                            <?php echo $this->translate('Photo album');?>
                             </a>
                         </div>
                         <div id="accordion1-content4" class="accordion-body collapse" >
@@ -108,9 +94,8 @@ $this->layout()->is_slider_flex = true;
 
                                 <div id="asm-trends" class="tabbable tabs-left">
                                     <ul class="nav nav-tabs">
-                                        <li class="active"><a href="#about-photo-album1" data-toggle="tab">Работники цеха</a></li>
-<!--                                            <li class="" ><a href="#about-photo-album2" data-toggle="tab">Праздник 9 Мая 2013г. </a></li>-->
-                                        <li class="" ><a href="#about-photo-album3" data-toggle="tab">День Химика 2013г.</a></li>
+                                        <li class="active"><a href="#about-photo-album1" data-toggle="tab"><?php echo $this->translate('Shop workers');?></a></li>
+                                        <li class="" ><a href="#about-photo-album3" data-toggle="tab"><?php echo $this->translate('Chemist\'s Day');?> 2013</a></li>
                                     </ul>
                                     <div class="tab-content  tab-touchtouch">
                                         <!--  about-photo-album1 -->

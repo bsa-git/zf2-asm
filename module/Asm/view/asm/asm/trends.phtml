@@ -72,7 +72,7 @@ $this->layout()->is_utility = true;
 
 
 <header class="title">
-    <h3>Данные в реальном времени Цех М-5</h3>
+    <h3><?php echo $this->translate('Real-time data');?> <?php echo $this->translate('Workshop');?> М-5</h3>
 </header>
 
 <!--<div class="well">-->
@@ -82,27 +82,27 @@ $this->layout()->is_utility = true;
         if ($this->tabActive == 'ammonia-gas') {
             echo 'active';
         }
-        ?>"  ><a href="#ammonia-gas" data-toggle="tab">Газообразный аммиак</a></li>
+        ?>"  ><a href="#ammonia-gas" data-toggle="tab"><?php echo $this->translate('Gaseous ammonia');?></a></li>
         <li class="<?php
         if ($this->tabActive == 'ammonia-liq') {
             echo 'active';
         }
-        ?>" ><a href="#ammonia-liq" data-toggle="tab">Жидкий аммиак</a></li>
+        ?>" ><a href="#ammonia-liq" data-toggle="tab"><?php echo $this->translate('Liquid ammonia');?></a></li>
         <li class="<?php
             if ($this->tabActive == 'natural-gas') {
                 echo 'active';
             }
-            ?>" ><a href="#natural-gas" data-toggle="tab">Природный газ</a></li>
+            ?>" ><a href="#natural-gas" data-toggle="tab"><?php echo $this->translate('Natural gas');?></a></li>
         <li class="<?php
         if ($this->tabActive == 'par16') {
             echo 'active';
         }
-        ?>" ><a href="#par16" data-toggle="tab">Пар16</a></li>
+        ?>" ><a href="#par16" data-toggle="tab"><?php echo $this->translate('Par16');?></a></li>
         <li class="<?php
         if ($this->tabActive == 'sklad') {
             echo 'active';
         }
-        ?>" ><a href="#sklad" data-toggle="tab">HNO3 Склад</a></li>
+        ?>" ><a href="#sklad" data-toggle="tab">HNO3 <?php echo $this->translate('Storage');?></a></li>
         <li class="<?php
         if ($this->tabActive == 'hno3-m9') {
             echo 'active';
@@ -112,7 +112,7 @@ $this->layout()->is_utility = true;
         if ($this->tabActive == 'voda') {
             echo 'active';
         }
-        ?>" ><a href="#voda" data-toggle="tab">Вода</a></li>
+        ?>" ><a href="#voda" data-toggle="tab"><?php echo $this->translate('Water');?></a></li>
     </ul>
 
     <div class="tab-content">
@@ -127,7 +127,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading "  >
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content1">
-                            Давление газ. NH3
+                        <?php echo $this->translate('Pressure of gaseous NH3');?>
                         </a>
                     </div>
                     <div id="accordion1-content1" class="accordion-body collapse" >
@@ -140,7 +140,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content2">
-                            Температура газ. NH3
+                        <?php echo $this->translate('Temperature of gaseous NH3');?>
                         </a>
                     </div>
                     <!-- stock-container    -->
@@ -154,7 +154,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion1-content3">
-                            Расход газ. NH3
+                        <?php echo $this->translate('Consumption of gaseous NH3');?>
                         </a>
                     </div>
                     <!-- stock-container    -->
@@ -177,7 +177,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content1">
-                            Давление ЖА-1
+                        <?php echo $this->translate('Liquid ammonia pressure');?>-1
                         </a>
                     </div>
                     <div id="accordion2-content1" class="accordion-body collapse" >
@@ -190,7 +190,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content2">
-                            Температура ЖА-1
+                        <?php echo $this->translate('Temperature of liquid ammonia');?>-1
                         </a>
                     </div>
                     <div id="accordion2-content2" class="accordion-body collapse">
@@ -203,7 +203,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content3">
-                            Расход ЖА-1
+                        <?php echo $this->translate('Consumption of liquid ammonia');?>-1
                         </a>
                     </div>
                     <div id="accordion2-content3" class="accordion-body collapse">
@@ -216,7 +216,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content4">
-                            Давление ЖА-2
+                        <?php echo $this->translate('Liquid ammonia pressure');?>-2
                         </a>
                     </div>
                     <div id="accordion2-content4" class="accordion-body collapse" >
@@ -229,7 +229,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content5">
-                            Температура ЖА-2
+                        <?php echo $this->translate('Temperature of liquid ammonia');?>-2
                         </a>
                     </div>
                     <div id="accordion2-content5" class="accordion-body collapse">
@@ -242,7 +242,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion2-content6">
-                            Расход ЖА-2
+                        <?php echo $this->translate('Consumption of liquid ammonia');?>-2
                         </a>
                     </div>
                     <div id="accordion2-content6" class="accordion-body collapse">
@@ -264,7 +264,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion3-content1">
-                            Давление ПГ
+                        <?php echo $this->translate('NG pressure');?>
                         </a>
                     </div>
                     <div id="accordion3-content1" class="accordion-body collapse" >
@@ -277,7 +277,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion3-content2">
-                            Температура ПГ
+                        <?php echo $this->translate('NG temperature');?>
                         </a>
                     </div>
                     <div id="accordion3-content2" class="accordion-body collapse">
@@ -290,7 +290,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion3-content3">
-                            Расход ПГ
+                        <?php echo $this->translate('Consumption of NG');?>
                         </a>
                     </div>
                     <div id="accordion3-content3" class="accordion-body collapse">
@@ -312,7 +312,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content1">
-                            Давление ПАР16-1
+                        <?php echo $this->translate('Pressure of Steam16');?>-1
                         </a>
                     </div>
                     <div id="accordion4-content1" class="accordion-body collapse" >
@@ -325,7 +325,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content2">
-                            Температура ПАР16-1
+                        <?php echo $this->translate('Temperature of Steam16');?>-1
                         </a>
                     </div>
                     <div id="accordion4-content2" class="accordion-body collapse">
@@ -338,7 +338,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content3">
-                            Расход ПАР16-1
+                        <?php echo $this->translate('Consumption of Steam16');?>-1
                         </a>
                     </div>
                     <div id="accordion4-content3" class="accordion-body collapse">
@@ -351,7 +351,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content4">
-                            Давление ПАР16-2
+                        <?php echo $this->translate('Pressure of Steam16');?>-2
                         </a>
                     </div>
                     <div id="accordion4-content4" class="accordion-body collapse" >
@@ -364,7 +364,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content5">
-                            Температура ПАР16-2
+                        <?php echo $this->translate('Temperature of Steam16');?>-2
                         </a>
                     </div>
                     <div id="accordion4-content5" class="accordion-body collapse">
@@ -377,7 +377,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion4-content6">
-                            Расход ПАР16-2
+                        <?php echo $this->translate('Consumption of Steam16');?>-2
                         </a>
                     </div>
                     <div id="accordion4-content6" class="accordion-body collapse">
@@ -399,7 +399,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion5-content1">
-                            Склад 1(отделение)
+                        <?php echo $this->translate('Storage');?> 1(<?php echo $this->translate('department');?>)
                         </a>
                     </div>
                     <div id="accordion5-content1" class="accordion-body collapse" >
@@ -412,7 +412,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion5-content2">
-                            Склад 2(отделение)
+                        <?php echo $this->translate('Storage');?> 2(<?php echo $this->translate('department');?>)
                         </a>
                     </div>
                     <div id="accordion5-content2" class="accordion-body collapse">
@@ -434,7 +434,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content1">
-                            Расход HNO3 выдача на М9-1
+                        <?php echo $this->translate('HNO3 consumption output to');?> М9-1
                         </a>
                     </div>
                     <div id="accordion6-content1" class="accordion-body collapse" >
@@ -447,7 +447,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion6-content2">
-                            Расход HNO3 выдача на М9-2
+                        <?php echo $this->translate('HNO3 consumption output to');?> М9-2
                         </a>
                     </div>
                     <div id="accordion6-content2" class="accordion-body collapse">
@@ -469,7 +469,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content1">
-                            Давление XOB
+                        <?php echo $this->translate('Pressure of XOB');?>
                         </a>
                     </div>
                     <div id="accordion7-content1" class="accordion-body collapse" >
@@ -482,7 +482,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content2">
-                            Температура XOB
+                        <?php echo $this->translate('Temperature of XOB');?>
                         </a>
                     </div>
                     <div id="accordion7-content2" class="accordion-body collapse">
@@ -495,7 +495,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content3">
-                            Расход XOB
+                        <?php echo $this->translate('Consumption of XOB');?>
                         </a>
                     </div>
                     <div id="accordion7-content3" class="accordion-body collapse">
@@ -508,7 +508,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content4">
-                            Температура OB-1
+                        <?php echo $this->translate('Temperature of OB');?>-1
                         </a>
                     </div>
                     <div id="accordion7-content4" class="accordion-body collapse">
@@ -521,7 +521,7 @@ $this->layout()->is_utility = true;
                     <div class="accordion-heading">
                         <center><span class="tag-value text-success" ></span></center>
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="" href="#accordion7-content5">
-                            Температура OB-2
+                        <?php echo $this->translate('Temperature of OB');?>-2
                         </a>
                     </div>
                     <div id="accordion7-content5" class="accordion-body collapse">
