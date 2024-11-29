@@ -11,6 +11,7 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
+
 // Get the name of the current working directory
 $dir = getcwd();
 
